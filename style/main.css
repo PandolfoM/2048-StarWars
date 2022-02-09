@@ -1,10 +1,20 @@
 @import url(fonts/clear-sans.css);
+
+:root {
+  --dark: #100b0d;
+  --light: #d7dfe7;
+  --secondary: #393438;
+  --secondaryOp: #393438d9;
+  --yellow: #FFE81F;
+  --blue: #3d74ae
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: var(--dark);
+  color: var(--yellow);
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
 }
@@ -88,14 +98,14 @@ h1.title:after {
 .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: var(--secondary);
   padding: 15px 25px;
   font-size: 25px;
   height: 25px;
   line-height: 47px;
   font-weight: bold;
   border-radius: 3px;
-  color: white;
+  color: var(--light);
   margin-top: 8px;
   text-align: center;
 }
@@ -109,17 +119,16 @@ h1.title:after {
   font-size: 13px;
   line-height: 13px;
   text-align: center;
-  color: #eee4da;
+  color: var(--light);
 }
 .score-container .score-addition,
 .best-container .score-addition {
   position: absolute;
   right: 30px;
-  color: red;
+  color: var(--yellow);
   font-size: 25px;
   line-height: 25px;
   font-weight: bold;
-  color: rgba(119, 110, 101, 0.9);
   z-index: 100;
   -webkit-animation: move-up 600ms ease-in;
   -moz-animation: move-up 600ms ease-in;
@@ -144,7 +153,7 @@ p {
 }
 
 a {
-  color: #776e65;
+  color: var(--secondary);
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
@@ -156,7 +165,7 @@ strong.important {
 
 hr {
   border: none;
-  border-bottom: 1px solid #d8d4d0;
+  border-bottom: 1px solid var(--light);
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -205,7 +214,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #bbada0;
+  background: var(--secondary);
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -220,7 +229,7 @@ hr {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(238, 228, 218, 0.5);
+  background: var(--secondaryOp);
   z-index: 100;
   text-align: center;
   -webkit-animation: fade-in 800ms ease 1200ms;
@@ -243,11 +252,11 @@ hr {
 }
 .game-container .game-message a {
   display: inline-block;
-  background: #8f7a66;
+  background: var(--secondary);
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: var(--light);
   height: 40px;
   line-height: 42px;
   margin-left: 9px;
@@ -256,8 +265,8 @@ hr {
   display: none;
 }
 .game-container .game-message.game-won {
-  background: rgba(237, 194, 46, 0.5);
-  color: #f9f6f2;
+  background: var(--yellow);
+  color: var(--light);
 }
 .game-container .game-message.game-won a.keep-playing-button {
   display: inline-block;
@@ -682,11 +691,11 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #8f7a66;
+  background: var(--secondary);
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: var(--light);
   height: 40px;
   line-height: 42px;
   display: block;
