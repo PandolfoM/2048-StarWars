@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>2048</title>
@@ -7,15 +8,23 @@
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png"
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"
+    media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+  <!-- iPhone, retina -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="viewport"
+    content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
+
 <body>
   <div class="container">
     <div class="heading">
@@ -37,7 +46,7 @@
       <div class="game-message">
         <p></p>
         <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
+          <a class="keep-playing-button">Keep going</a>
           <a class="retry-button">Try again</a>
         </div>
       </div>
@@ -75,11 +84,111 @@
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles of the same character touch, they <strong>merge into a stronger more powerful character</strong>
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two
+      tiles of the same character touch, they <strong>merge into a stronger more powerful character</strong>
     </p>
+    <div>
+      <div class="show-tiles">
+        <a id="tierList">Character Tier List <i id="tierArrow" class="fa-solid fa-angle-up"></i></a>
+      </div>
+      <div id="characterlist" aria-expanded="false">
+        <div class="flex-grid">
+          <div class="row tile-2">
+            <div class="row-img">
+              <img src="style/img/2.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/jawa" target="_blank">Jawa</a>
+            </div>
+          </div>
+          <div class="row tile-4">
+            <div class="row-img">
+              <img src="style/img/4.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/stormtroopers" target="_blank">Stormtrooper</a>
+            </div>
+          </div>
+          <div class="row tile-8">
+            <div class="row-img">
+              <img src="style/img/8.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/c-3po" target="_blank">C-3PO</a>
+            </div>
+          </div>
+          <div class="row tile-16">
+            <div class="row-img">
+              <img src="style/img/16.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/r2-d2" target="_blank">R2-D2</a>
+            </div>
+          </div>
+          <div class="row tile-32">
+            <div class="row-img">
+              <img src="style/img/32.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/chewbacca" target="_blank">Chewbacca</a>
+            </div>
+          </div>
+          <div class="row tile-64">
+            <div class="row-img">
+              <img src="style/img/64.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/obi-wan-kenobi" target="_blank">Obi-Wan Kenobi</a>
+            </div>
+          </div>
+          <div class="row tile-128">
+            <div class="row-img">
+              <img src="style/img/128.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/boba-fett" target="_blank">Boba Fett</a>
+            </div>
+          </div>
+          <div class="row tile-256">
+            <div class="row-img">
+              <img src="style/img/256.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/darth-maul" target="_blank">Darth Maul</a>
+            </div>
+          </div>
+          <div class="row tile-512">
+            <div class="row-img">
+              <img src="style/img/512.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/qui-gon-jinn" target="_blank">Qui-Gon Jinn</a>
+            </div>
+          </div>
+          <div class="row tile-1024">
+            <div class="row-img">
+              <img src="style/img/1024.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/darth-vader" target="_blank">Darth Vader</a>
+            </div>
+          </div>
+          <div class="row tile-2048">
+            <div class="row-img">
+              <img src="style/img/2048.svg">
+            </div>
+            <div class="characterLink">
+              <a href="https://www.starwars.com/databank/emperor-palpatine-darth-sidious" target="_blank">Emperor
+                Palpatine</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <hr>
     <p>
-    Edited by <a href="https://mattpandolfo.com" target="_blank">Matthew Pandolfo</a> Clone of <a href="https://play2048.co/" target="_blank">2048 by Gabriele Cirulli</a>
+      Edited by <a href="https://mattpandolfo.com" target="_blank">Matthew Pandolfo</a> Clone of <a
+        href="https://play2048.co/" target="_blank">2048 by Gabriele Cirulli</a>
     </p>
   </div>
 
@@ -93,5 +202,7 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+  <script src="js/tierlist.js"></script>
 </body>
+
 </html>
